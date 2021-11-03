@@ -242,5 +242,4 @@ p1 <- qplot(x)
 p2 <- qplot(x,y)
 grid.arrange(p1, p2, ncol = 2)
 ```
-
 ![Exemplo](Imagens/Exemplo8.png)

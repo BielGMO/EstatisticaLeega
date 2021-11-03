@@ -99,3 +99,18 @@ library(ggrepel)
 data(murders)
 x <- log10(murders$population)
 y <- murders$total
+
+# Criando gráfico de dispersão método padrão
+data.frame(x = x, y = y) %>%
+  ggplot(aes(x, y)) +
+  geom_point()
+
+# Mesmo gráfico anterior com qplot
+qplot(x, y)
+
+# Grade de gráficos
+install.packages("gridExtra")
+library(gridExtra)
+p1 <- qplot(x)
+p2 <- qplot(x,y)
+grid.arrange(p1, p2, ncol = 2)

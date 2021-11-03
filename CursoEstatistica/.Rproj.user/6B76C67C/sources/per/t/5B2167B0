@@ -3,9 +3,9 @@
     "path": "D:/Leega/Curso Estatistica/CursoEstatistica/cap7.R",
     "project_path": "cap7.R",
     "type": "r_source",
-    "hash": "0",
+    "hash": "348583984",
     "contents": "",
-    "dirty": true,
+    "dirty": false,
     "created": 1635907827557.0,
     "source_on_save": false,
     "relative_order": 1,
@@ -17,11 +17,11 @@
         "scrollLine": "85"
     },
     "folds": "",
-    "lastKnownWriteTime": 1635921059,
+    "lastKnownWriteTime": 1635923532,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1635921286224,
+    "last_content_update": 1635923532979,
     "read_only": false,
     "read_only_alternatives": []
 }
