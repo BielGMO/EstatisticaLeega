@@ -426,7 +426,7 @@ Também podemos usar o argumento ```geom``` para gerar um **gráfico de densidad
 qplot(x, geom = "density")
 ```
 
-Embora não tão flexível quanto o **ggplot** podemos melhroar a aparência do histogrma anterior, por exemplo:
+Embora não tão flexível quanto o **ggplot** podemos melhorar a aparência do histogrma anterior, por exemplo:
 ```R
 qplot(x, bins=15, color = I("black"), xlab = "Population")
 ```
