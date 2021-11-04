@@ -395,3 +395,38 @@ scale_fill_gradientn(colors = terrain.colors(10))
 ![Exemplo](Imagens/Ex23.png)
 
 ### Gráficos rápidos
+Aqui temos a função ```qplot``` sendo uma função muito útil quando precisamos fazer um rápido diagrama de dispersão, histogramas, gráficos de densidade, boxplots, gráficos QQ e muito mais. Suponha que tenhamos as alturas femininas em um objeto ```x```:
+```R
+x <- heights %>%
+filter(sex=="Female") %>%
+pull(height)
+```
+Para fazer um **histograma** rápido, podemos usar:
+```R
+qplot(x)
+```
+
+Se fornecermos duas variáveis para qplot, ele cria automaticamente um **diagrama de dispersão**. Para fazer um **gráfico QQ** rápido, você pode usar o argumento ```sample```:
+```R
+qplot(sample = scale(x)) + geom_abline()
+```
+
+Se fornecermos um *factor* e um vetor numérico, obteremos um gráfico como o que veremos a seguir. Observe que no código estamos usando o argumento ```data```. Como o data frame não é o primeiro argumento em qplot, temos que usar o operador de ponto:
+```R
+heights %>% qplot(sex, height, data = .)
+```
+
+Também podemos selecionar uma geometria específica usando o argumento ```geom```. Portanto, para converter o gráfico anterior em um **boxplot**, usamos o seguinte código:
+```R
+heights %>% qplot(sex, height, data = ., geom = "boxplot")
+```
+
+Também podemos usar o argumento ```geom``` para gerar um **gráfico de densidade** em vez de um histograma:
+```R
+qplot(x, geom = "density")
+```
+
+Embora não tão flexível quanto o **ggplot** podemos melhroar a aparência do histogrma anterior, por exemplo:
+```R
+qplot(x, bins=15, color = I("black"), xlab = "Population")
+```
